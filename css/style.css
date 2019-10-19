@@ -1,6 +1,6 @@
 .jumbotron{background-image:url("https://cdn.pixabay.com/photo/2015/09/09/21/33/vienna-933500_960_720.jpg");
-			object-fit:cover;
-			background-repeat: no-repeat;
+			background-size:cover;
+			background-position:center;
 			height: 60vh;
 			width:100vw;
 

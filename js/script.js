@@ -26,7 +26,7 @@ var Loc = /** @class */ (function () {
         this.city = city;
     }
     Loc.prototype.display = function () {
-        return "<div class=\"media  p-3\">\n        <img src=" + this.img + " alt=\"\" class=\"mr-3 mt-3 rounded-circle\" style=\"width:150px;height:150px;\">\n        <div class=\"media-body\">\n            <div class=\"text-container pl-5 pt-10\">\n                <h4>" + this.location + "</h4><br>\n                 <p>" + this.description + "</p>\n                 <div id=\"place-type\">\n                 " + this.adress + "<br>" + this.zipcode + "<br>" + this.city + "\n                 </div>\n            </div>\n        </div>";
+        return "<div class=\"media p-5\">\n        <img src=" + this.img + " alt=\"\" class=\"mr-3 mt-3 rounded-circle\" style=\"width:150px;height:150px;\">\n        <div class=\"media-body\">\n            <div class=\"text-container pl-2\">\n                <h4>" + this.location + "</h4><br>\n                 <p>" + this.description + "</p>\n                 <div id=\"place-type\">\n                 " + this.adress + "<br>" + this.zipcode + "<br>" + this.city + "\n                 </div>\n            </div>\n        </div>";
     };
     return Loc;
 }());
@@ -45,7 +45,7 @@ var Restaurants = /** @class */ (function (_super) {
         return _this;
     }
     Restaurants.prototype.display = function () {
-        return "<div class=\"media  p-3\">\n        <img src=" + this.img + " alt=\"\" class=\"mr-3 mt-3 rounded-circle\" style=\"width:150px;height:150px;\">\n        <div class=\"media-body\">\n            <div class=\"text-container pl-5 pt-10\">\n                <h4>" + this.location + "</h4><br>\n                 <p>" + this.description + "</p>\n                 <div id=\"place-type\">\n                 " + this.adress + "<br>" + this.zipcode + "<br>" + this.city + "<br>" + this.tel + "<br>" + this.website + "\n                 </div>\n            </div>\n        </div>";
+        return "<div class=\"media  p-5\">\n        <img src=" + this.img + " alt=\"\" class=\"mr-3 mt-3 rounded-circle\" style=\"width:150px;height:150px;\">\n        <div class=\"media-body\">\n            <div class=\"text-container pl-2\">\n                <h4>" + this.location + "</h4><br>\n                 <p>" + this.description + "</p>\n                 <div id=\"place-type\">\n                 " + this.adress + "<br>" + this.zipcode + "<br>" + this.city + "<br>" + this.tel + "<br><a href=\"" + this.website + "\">" + this.website + "</a></a>\n                 </div>\n            </div>\n        </div>";
     };
     return Restaurants;
 }(Loc));
@@ -58,14 +58,14 @@ for (var i = 0; i < arrRest.length; i++) {
 var Events = /** @class */ (function (_super) {
     __extends(Events, _super);
     function Events(location, description, adress, zipcode, img, city, tel, website, date, price) {
-        var _this = _super.call(this, location, description, adress, zipcode, img, city, tel, website) || this;
+        var _this = _super.call(this, location, description, adress, zipcode, img, city) || this;
         _this.website = website;
         _this.date = date;
         _this.price = price;
         return _this;
     }
     Events.prototype.display = function () {
-        return "<div class=\"media  p-3\">\n        <img src=" + this.img + " alt=\"\" class=\"mr-3 mt-3 rounded-circle\" style=\"width:150px;height:150px;\">\n        <div class=\"media-body\">\n            <div class=\"text-container pl-5 pt-10\">\n                <h4>" + this.location + "</h4><br>\n                 <p>" + this.description + "</p>\n                 <div id=\"place-type\">\n                 " + this.adress + "<br>" + this.zipcode + "<br>" + this.city + "<br>" + this.website + "<br>" + this.date + "\n                 </div>\n            </div>\n        </div>";
+        return "<div class=\"media p-5\">\n        <img src=" + this.img + " alt=\"\" class=\"mr-3 mt-3 rounded-circle\" style=\"width:150px;height:150px;\">\n        <div class=\"media-body\">\n            <div class=\"text-container pl-2\">\n                <h4>" + this.location + "</h4><br>\n                 <p>" + this.description + "</p>\n                 <div id=\"place-type\">\n                 " + this.adress + "<br>" + this.zipcode + "<br>" + this.city + "<br><a href=\"" + this.website + "\">" + this.website + "</a></a><br>" + this.date + "\n                 </div>\n            </div>\n        </div>";
     };
     return Events;
 }(Loc));
